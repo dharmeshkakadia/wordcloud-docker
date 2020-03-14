@@ -6,7 +6,7 @@ Generate word cloud image from text using [Python wordcloud](https://github.com/
 To generate word cloud image from text file `README.md` use the following command from the directory of the file.
 
 ```
-docker run -it --rm --volume="$PWD:/work" --workdir /work dharmeshkakadia/wordcloud wordcloud_cli --text README.md --imagefile wordcloud.png
+docker run --rm -v "$PWD:/work" -w /work dharmeshkakadia/wordcloud wordcloud_cli --text README.md --imagefile wordcloud.png
 ```
 
 This will generate output like following and save it as `wordcloud.png` in the current directory.
